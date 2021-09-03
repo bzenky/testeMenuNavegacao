@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  max-height: 1250px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container .title {
+  font-size: 36px;
+  margin: 25px;
+}
+
+.container .card {
+  display: flex;
+}
+
+.container .card .list {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  text-align: center;
+  padding: 10px 15px;
+  background-color: #474747;
+}
+
+.card .list a {
+  position: relative;
+  text-decoration: none;
+  color: #e7e7e7;
+  padding: 20px 0;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  min-width: 170px;
+}
+
+.card .list a::after {
+  position: absolute;
+  content: '';
+  width: 25px;
+  height: 2px;
+  background-color: blue;
+  bottom: -2px;
+  left: 0;
+  transition: .3s ease-in-out;
+}
+
+.card .list a:hover::after {
+  width: 55px;
+}
+
+.card .list a.active::after {
+  width: 85px;
+}
+
+.card .list a {
+  border-bottom: 2px solid gray;
+}
+
+.container .card .textCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  background-color: #f7f7f7;
+  border: 1px solid black;
+}
+
+.card .textCard p {
+  display: none;
+}
+
+.card .textCard p.active {
+  display: block;
+}
+
