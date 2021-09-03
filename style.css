@@ -73,6 +73,7 @@
 }
 
 .container .card .textCard {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,9 +83,13 @@
 }
 
 .card .textCard .text {
-  display: none;
+  position: absolute;
+  visibility: hidden;
   line-height: 1.5;
   margin: 0 15px;
+  opacity: 0;
+  transform: translateX(-25px);
+  transition: transform .4s ease-in-out, opacity .6s ease-in-out .1s, visibility .3s ease-in-out;
 }
 
 .card .textCard .text p {
@@ -96,6 +101,8 @@
 }
 
 .card .textCard .text.active {
-  display: block;
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
 }
 
