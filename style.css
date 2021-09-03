@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   max-height: 1250px;
   font-family: 'Poppins', sans-serif;
 }
@@ -24,14 +24,16 @@
 
 .container .card {
   display: flex;
+  height: 550px;
 }
 
 .container .card .list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   max-width: 200px;
   text-align: center;
-  padding: 10px 15px;
+  padding: 25px 15px;
   background-color: #474747;
 }
 
@@ -41,15 +43,16 @@
   color: #e7e7e7;
   padding: 20px 0;
   cursor: pointer;
-  font-weight: bold;
-  letter-spacing: 1.5px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1.3px;
   min-width: 170px;
 }
 
 .card .list a::after {
   position: absolute;
   content: '';
-  width: 25px;
+  width: 25%;
   height: 2px;
   background-color: blue;
   bottom: -2px;
@@ -58,11 +61,11 @@
 }
 
 .card .list a:hover::after {
-  width: 55px;
+  width: 50%;
 }
 
 .card .list a.active::after {
-  width: 85px;
+  width: 100%;
 }
 
 .card .list a {
@@ -78,11 +81,21 @@
   border: 1px solid black;
 }
 
-.card .textCard p {
+.card .textCard .text {
   display: none;
+  line-height: 1.5;
+  margin: 0 15px;
 }
 
-.card .textCard p.active {
+.card .textCard .text p {
+  margin: 5px 0;
+}
+
+.card .textCard .text ul {
+  margin: 0 15px;
+}
+
+.card .textCard .text.active {
   display: block;
 }
 
